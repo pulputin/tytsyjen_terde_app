@@ -1,0 +1,47 @@
+import "./App.css";
+body {
+  background: #fffafc;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  border: 1px solid #fcdff1;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ffd6e7;
+  margin-bottom: 0.8rem;
+}
+
+button {
+  background: #ffb6c1;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: #ffa6b6;
+}
+
+h1, h2 {
+  color: #ff69b4;
+}
