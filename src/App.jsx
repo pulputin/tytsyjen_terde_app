@@ -32,6 +32,11 @@ export default function App() {
       names.push(participant);
       setList(updated);
     }
+    const deleteTerassi = (index) => {
+  const updated = [...list];
+  updated.splice(index, 1);
+  setList(updated);
+};
   };
 
   const getPoints = () => {
