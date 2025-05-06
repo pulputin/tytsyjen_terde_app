@@ -107,6 +107,9 @@ export default function App() {
             <p>👥 Osallistujat: {t.participants.join(', ') || 'Ei vielä ketään'}</p>
           </li>
         ))}
+        <button onClick={() => deleteTerassi(i)} style={{ marginTop: "0.5rem", background: "#fdd" }}>
+  🗑️ Poista tämä
+</button>
       </ul>
 
       <h2>🌟 Tytsyjen Ranking</h2>
