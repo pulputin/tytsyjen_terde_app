@@ -24,20 +24,21 @@ export default function App() {
     setRatings({ food: 3, drinks: 3, milieu: 3, vibe: 3 });
   };
 
-  const joinTerassi = (index) => {
-    if (!participant.trim()) return;
-    const updated = [...list];
-    const names = updated[index].participants;
-    if (!names.includes(participant)) {
-      names.push(participant);
-      setList(updated);
-    }
-    const deleteTerassi = (index) => {
+const joinTerassi = (index) => {
+  if (!participant.trim()) return;
+  const updated = [...list];
+  const names = updated[index].participants;
+  if (!names.includes(participant)) {
+    names.push(participant);
+    setList(updated);
+  }
+};
+
+const deleteTerassi = (index) => {
   const updated = [...list];
   updated.splice(index, 1);
   setList(updated);
 };
-  };
 
   const getPoints = () => {
     const points = {};
@@ -105,11 +106,11 @@ export default function App() {
             <p>🍽️ {t.ratings.food} | 🍹 {t.ratings.drinks} | 🌇 {t.ratings.milieu} | 🎉 {t.ratings.vibe}</p>
             <button onClick={() => joinTerassi(i)}>Oon tulossa!</button>
             <p>👥 Osallistujat: {t.participants.join(', ') || 'Ei vielä ketään'}</p>
-          </li>
-        ))}
-        <button onClick={() => deleteTerassi(i)} style={{ marginTop: "0.5rem", background: "#fdd" }}>
+          <button onClick={() => deleteTerassi(i)} style={{ marginTop: "0.5rem", background: "#fdd" }}>
   🗑️ Poista tämä
-</button>
+</button> </li>
+        ))}
+       
       </ul>
 
       <h2>🌟 Tytsyjen Ranking</h2>
